@@ -1,3 +1,4 @@
+window.onload = function() {
 var game = new Phaser.Game(
 	        /* szerokość */ 960,
 	       /* wysokość */ 600,
@@ -11,9 +12,12 @@ var game = new Phaser.Game(
 
 game.global = {};
 
+// List of states
 game.state.add('boot', Game.Boot);
-game.state.add('preload', Game.Preload);
-game.state.add('menu', Game.Splash);
+game.state.add('preloader', Game.Preloader);
+game.state.add('menu', Game.MainMenu);
 game.state.add('play', Game.Play);
 
+// Start boot state
 game.state.start('boot');
+};
