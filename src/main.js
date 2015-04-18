@@ -3,7 +3,7 @@ var game = new Phaser.Game(
 	        /* szerokość */ 960,
 	       /* wysokość */ 600,
 	     /* renderer */ Phaser.AUTO,
-	       /* rodzic */ 'game-wrap',
+	       /* rodzic */ 'gameContainer',
 	        /* stan */ null,
 	  /* przezroczystość */ true,
 	    /* antialias */ true,
