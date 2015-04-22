@@ -1,14 +1,5 @@
 window.onload = function() {
-var game = new Phaser.Game(
-	        /* szerokość */ 960,
-	       /* wysokość */ 600,
-	     /* renderer */ Phaser.AUTO,
-	       /* rodzic */ 'game-wrap',
-	        /* stan */ null,
-	  /* przezroczystość */ true,
-	    /* antialias */ true,
-	/* konfiguracja fizyki */ null
-);
+var game = new Phaser.Game(960, 600, Phaser.AUTO, 'gameContainer');
 
 game.global = {};
 
