@@ -4,9 +4,9 @@ Game.Menu = function (game) {
 
 Game.Menu.prototype = {
     create: function() {
-        var gameName = this.add.text(this.world.centerX, this.world.centerY-150, 'CURVY COPTER', {
+        var gameName = this.add.text(this.world.centerX, this.world.centerY-250, 'CURVY COPTER', {
                 font: "Squada One",
-                fontSize: 80,
+                fontSize: 90,
                 fill: '#333'
         });
         gameName.anchor.setTo(0.5, 0.5);
