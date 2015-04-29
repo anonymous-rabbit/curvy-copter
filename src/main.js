@@ -1,5 +1,8 @@
 window.onload = function() {
-var game = new Phaser.Game(960, 600, Phaser.AUTO, 'gameContainer');
+var innerWidth = window.innerWidth;
+var innerHeight = window.innerHeight;
+var gameRatio = innerWidth/innerHeight;
+var game = new Phaser.Game(Math.ceil(480*gameRatio), 480, Phaser.AUTO, 'gameContainer');
 
 game.global = {};
 
