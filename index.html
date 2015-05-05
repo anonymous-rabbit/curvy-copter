@@ -8,17 +8,15 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <title>curvy copter - HTML5 and Javascript endless runner game</title>
   <style>
-    @font-face {
-        font-family: 'Squada One';
-        src: url('assets/fonts/SquadaOne.ttf') format('truetype');
-}
-    * {
+  @font-face {
+      font-family: 'Squada One';
+      src: url('assets/fonts/SquadaOne.ttf') format('truetype');
+  }
+  * {
         margin: 0;
         padding: 0;
+        overflow: hidden;
   }
-    #gameContainer {
-        overflow:hidden; /* resizing bug fix */
-    }
   </style>
   <script type="text/javascript" src="src/lib/phaser.js"></script>
   <script type="text/javascript" src="src/states/boot.js"></script>
