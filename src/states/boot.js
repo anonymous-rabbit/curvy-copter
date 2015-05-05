@@ -7,7 +7,6 @@ Game.Boot = function (game) {
 Game.Boot.prototype = {
     init: function () {
         this.game.stage.backgroundColor = '#e2e2e2';
-        this.add.text(0, 0, "font-fix", {font:"20px 'Squada One'", fill:"#e2e2e2"});
         this.input.maxPointers = 1;
         this.stage.disableVisibilityChange = true;
     },
