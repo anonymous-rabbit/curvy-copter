@@ -19,7 +19,7 @@ Game.Preloader.prototype = {
 
     create: function() {
 
-        this.music = this.add.audio( 'music', 0.0, true );
+        this.music = this.add.audio( 'menu-music', 0.0, true );
 	    this.music.play();
         this.time.events.add( Phaser.Timer.SECOND* 0.5, function() {
                 this.state.start('Menu');

@@ -37,6 +37,7 @@ Game.Menu.prototype = {
         squaresEmitter.maxRotation = 45;
         squaresEmitter.flow(25000, 500);
         this.keySpacebar.onDown.addOnce(function () {
+            this.music.stop();
             this.state.start('Play');
         }, this);
 
