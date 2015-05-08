@@ -27,7 +27,7 @@ Game.Menu.prototype = {
 		},200+Math.random()*200,Phaser.Easing.Linear.None,true,0,1000,true);
         var squaresEmitter = this.add.emitter(this.world.centerX, this.world.height+20, 50);
         squaresEmitter.makeParticles(this.cache.getBitmapData( 'square' ));
-        squaresEmitter.maxParticleScale = 1;
+        squaresEmitter.maxParticleScale = 1.2;
         squaresEmitter.minParticleScale = 0.2;
         squaresEmitter.setYSpeed(-60, -60);
         squaresEmitter.setXSpeed(-3, 3);
@@ -36,10 +36,9 @@ Game.Menu.prototype = {
         squaresEmitter.minRotation = 0;
         squaresEmitter.maxRotation = 45;
         squaresEmitter.flow(25000, 500);
-        this.keySpacebar.onDown.addOnce(this.start, this);
+        this.keySpacebar.onDown.addOnce(function () {
+            this.state.start('Play');
+        }, this);
 
-    },
-    start: function() {
-        this.state.start('Play');
-},
+    }
 };
