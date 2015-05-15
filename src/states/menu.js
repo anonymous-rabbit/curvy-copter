@@ -4,6 +4,9 @@ Game.Menu = function (game) {
 
 Game.Menu.prototype = {
     create: function() {
+        this.music = this.add.audio( 'menu-music', 0.5, true );
+        this.gameMusic = this.add.audio ( 'background-music', 0.5, true);
+	    this.music.play();
         this.keySpacebar = this.input.keyboard.addKey( Phaser.Keyboard.SPACEBAR );
         var gameName = this.add.text(this.world.centerX, -150, 'CURVY COPTER', {
                 font: "Squada One",
@@ -38,6 +41,7 @@ Game.Menu.prototype = {
         squaresEmitter.flow(25000, 500);
         this.keySpacebar.onDown.addOnce(function () {
             this.music.stop();
+            this.gameMusic.play();
             this.state.start('Play');
         }, this);
 

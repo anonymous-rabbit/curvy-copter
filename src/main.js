@@ -1,4 +1,3 @@
-window.onload = function() {
 var innerWidth = window.innerWidth;
 var innerHeight = window.innerHeight;
 var gameRatio = innerWidth/innerHeight;
@@ -14,4 +13,4 @@ game.state.add('Play', Game.Play);
 
 // Start boot state
 game.state.start('Boot');
-};
+
