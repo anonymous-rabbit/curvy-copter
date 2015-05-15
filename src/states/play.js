@@ -5,7 +5,8 @@ Game.Play = function (game) {
 Game.Play.prototype = {
     create: function () {
         this.tick = 0;
-
+        this.gameMusic = this.add.audio ( 'background-music', 0.5, true);
+        this.explosion = this.add.audio ('explosion', 1, false);
         this.keySpacebar = game.input.keyboard.addKey( Phaser.Keyboard.SPACEBAR );
         this.keySpacebar.onDown.add( this.startGame, this );
 
@@ -103,6 +104,7 @@ Game.Play.prototype = {
     startGame: function() {
         if( !this.hasStarted && this.readyToPlay ) {
             this.hasStarted = true;
+            this.gameMusic.play();
             this.hero.body.allowGravity = true;
 	   }
     },
@@ -117,6 +119,8 @@ Game.Play.prototype = {
         var self = this;
         if( !this.dead ) {
             this.dead = true;
+            this.explosion.play();
+            this.gameMusic.stop();
             if( this.tick > this.bestScore ) {
 			 localStorage.bestScoreCurvy = this.tick;
 		}
